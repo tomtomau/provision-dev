@@ -60,3 +60,6 @@ brew install tmux
 
 echo 'Installing Hammerspoon'
 ./hammerspoon/install.sh
+
+echo 'Installing Spotify'
+brew cask install spotify
