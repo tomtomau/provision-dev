@@ -52,3 +52,11 @@ echo 'Setting Fish to be default shell'
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
+echo 'Installing Slack'
+brew cask install slack
+
+echo 'Installing tmux'
+brew install tmux
+
+echo 'Installing Hammerspoon'
+./hammerspoon/install.sh
