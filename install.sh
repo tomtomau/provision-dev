@@ -43,7 +43,7 @@ do
 done
 
 # This installs specific apps via Homebrew Cask
-casks=(spectacle google-chrome slack spotify jetbrains-toolbox virtualbox vagrant)
+casks=(balenaetcher google-chrome slack spotify jetbrains-toolbox virtualbox vagrant)
 for cask in ${casks[*]}
 do
 	printf "Installing %s\n" $cask

@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Tom Newby
+	email = me@tomnewby.net
+[alias]
+	pl = "pull --prune --ff-only"
+    	purge = "!git branch -vv | grep \\:\\ gone | grep -v '\\*' | cut -c 3- | cut -d \\  -f 1 | grep -v 'master'"
+        purgef = "!git purge | xargs -n 1 git branch -D"
+	co = checkout
+	p = push
+	pu = push -u
+	puf = push -u -f
+	pl = pull --prune --ff-only
+[core]
+	excludesfile = ~/.gitignore
