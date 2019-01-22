@@ -1,0 +1,11 @@
+---
+# setup my macbook just the way I like it
+
+- hosts: mac 
+  roles:
+    - homebrew
+    - role: suzuki-shunsuke.nvm
+      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
+
+#    TODO: Change shell to zsh
+# TODO: Run oh-my-zsh install

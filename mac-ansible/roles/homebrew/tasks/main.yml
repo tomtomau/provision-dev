@@ -1,0 +1,9 @@
+- name: install homebrew and formulae
+  homebrew:
+    name: "{{applications}}"
+    state: latest
+- name: install homebrew casks
+  homebrew_cask:
+    name: "{{casks}}"
+    state: latest
+

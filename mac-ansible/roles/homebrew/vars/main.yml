@@ -1,0 +1,26 @@
+applications:
+  - awscli
+  - tmux
+  - awscli
+  - packer
+  - terraform
+  - php@7.2
+  - jq
+  - yarn
+  - hub
+  - zsh
+  - zsh-completions
+
+casks:
+  - anaconda
+  - balanaetcher
+  - discord
+  - jetbrains-toolbox
+  - google-chrome
+  - toggl
+  - sketch
+  - slack
+  - spotify
+  - virtualbox
+  - vagrant
+  - zoomus
