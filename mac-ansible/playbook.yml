@@ -3,9 +3,35 @@
 
 - hosts: mac 
   roles:
-    - homebrew
-    - role: suzuki-shunsuke.nvm
-      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
+    - role: ssh-keys
+
+#    - role: homebrew
+#      applications:
+#              - awscli
+#              - tmux
+#              - awscli
+#              - htop
+#              - packer
+#              - terraform
+#              - php@7.2
+#              - jq
+#              - yarn
+#              - hub
+#              - zsh
+#              - zsh-completions
+#      casks:
+#              - balenaetcher
+#              - discord
+#              - jetbrains-toolbox
+#              - google-chrome
+#              - slack
+#              - spotify
+#              - virtualbox
+#              - vagrant
+#              - zoomus
+#
+#    - role: suzuki-shunsuke.nvm
+#      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
 
 #    TODO: Change shell to zsh
 # TODO: Run oh-my-zsh install
