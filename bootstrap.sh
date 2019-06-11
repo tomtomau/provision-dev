@@ -26,3 +26,5 @@ mkdir -p ~/src/tomtomau/
 
 git clone https://github.com/tomtomau/provision-dev.git ~/src/tomtomau/provision-dev
 
+cd ~/src/tomtomau/provision-dev/
+bash ./install.sh

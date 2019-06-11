@@ -9,6 +9,8 @@ brew update
 
 brew install ansible
 
-cd mac-ansible
 git remote remove origin
 git remote add origin git@github.com:tomtomau/provision-dev.git
+
+cd mac-ansible
+make install
