@@ -1,9 +1,8 @@
 ---
 # setup my macbook just the way I like it
 
-- hosts: mac 
+- hosts: mac
   roles:
-    - role: ssh-keys
 
 #    - role: homebrew
 #      applications:
@@ -26,12 +25,20 @@
 #              - google-chrome
 #              - slack
 #              - spotify
+#	       - spectacle
 #              - virtualbox
 #              - vagrant
 #              - zoomus
 #
 #    - role: suzuki-shunsuke.nvm
 #      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
+    - role: ssh-keys
+#    - role: karlmdavis.rcm-dotfiles
+#      rcm_user: "{{ lookup('env', 'USER') }}"
+#      rcm_repos:
+#          - repo: 'git@github.com:tomtomau/dotfiles.git'
+#            dest: "{{ lookup('env', 'HOME') }}/.dotfiles/"
+#    - role: use-zsh
 
 #    TODO: Change shell to zsh
 # TODO: Run oh-my-zsh install

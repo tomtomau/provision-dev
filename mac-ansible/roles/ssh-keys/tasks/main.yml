@@ -1,4 +1,17 @@
+- name: Check if SSH key has been created
+  command: test -f ~/.ssh/id_rsa
+  register: ssh_key_exists
 - name: Generate SSH keys
-  shell: ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N ""
+  command: ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N ""
+  when: ssh_key_exists is failed
   args:
     creates: ~/.ssh/id_rsa
+
+- name: Get the GitHub token
+  action: "shell source {{ lookup('env', 'HOME') }}/.bashrc && echo $GITHUB_TOKEN"
+  register: github_token_command
+
+- set_fact: github_token="{{ github_token_command.stdout }}"
+
+- name: Check if key already exists on GitHub
+  command: "env GITHUB_TOKEN={{ github_token }} bash {{ role_path }}/tasks/has-key-installed.sh "
