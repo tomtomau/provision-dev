@@ -1,9 +1,9 @@
 .PHONY: homebrew
 
-install: galaxy-install homebrew
+install: galaxy-install playbook
 
 galaxy-install:
 	ansible-galaxy install -r requirements.yml
 
-homebrew:
-	ansible-playbook --ask-become-pass -i ./hosts playbook.yml -vvv
+playbook:
+	ansible-playbook --ask-become-pass -i ./hosts playbook.yml

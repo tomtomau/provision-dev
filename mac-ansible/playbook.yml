@@ -1,45 +1,42 @@
 ---
 # setup my macbook just the way I like it
 
-- hosts: mac
-  roles:
+-   hosts: mac
+    roles:
+        -   role: homebrew
+            applications:
+                - awscli
+                - tmux
+                - awscli
+                - htop
+                - packer
+                - terraform
+                - php@7.2
+                - jq
+                - yarn
+                - hub
+                - zsh
+                - zsh-completions
+            casks:
+                - balenaetcher
+                - discord
+                - jetbrains-toolbox
+                - google-chrome
+                - slack
+                - spotify
+                - spectacle
+                - virtualbox
+                - vagrant
+                - zoomus
 
-#    - role: homebrew
-#      applications:
-#              - awscli
-#              - tmux
-#              - awscli
-#              - htop
-#              - packer
-#              - terraform
-#              - php@7.2
-#              - jq
-#              - yarn
-#              - hub
-#              - zsh
-#              - zsh-completions
-#      casks:
-#              - balenaetcher
-#              - discord
-#              - jetbrains-toolbox
-#              - google-chrome
-#              - slack
-#              - spotify
-#	       - spectacle
-#              - virtualbox
-#              - vagrant
-#              - zoomus
-#
-#    - role: suzuki-shunsuke.nvm
-#      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
-    - role: ssh-keys
-      github_key_title: "mbp.15-inch-retina-2014"
-#    - role: karlmdavis.rcm-dotfiles
-#      rcm_user: "{{ lookup('env', 'USER') }}"
-#      rcm_repos:
-#          - repo: 'git@github.com:tomtomau/dotfiles.git'
-#            dest: "{{ lookup('env', 'HOME') }}/.dotfiles/"
-#    - role: use-zsh
+        -   role: suzuki-shunsuke.nvm
+            nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
+        -   role: ssh-keys
+            github_key_title: "mbp.15-inch-retina-2014"
+        -   role: karlmdavis.rcm-dotfiles
+            rcm_user: "{{ lookup('env', 'USER') }}"
+            rcm_repos:
+                -   repo: 'git@github.com:tomtomau/dotfiles.git'
+                    dest: "{{ lookup('env', 'HOME') }}/.dotfiles/"
+        -   role: use-zsh
 
-#    TODO: Change shell to zsh
-# TODO: Run oh-my-zsh install
