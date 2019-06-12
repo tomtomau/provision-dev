@@ -33,6 +33,7 @@
 #    - role: suzuki-shunsuke.nvm
 #      nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
     - role: ssh-keys
+      github_key_title: "mbp.15-inch-retina-2014"
 #    - role: karlmdavis.rcm-dotfiles
 #      rcm_user: "{{ lookup('env', 'USER') }}"
 #      rcm_repos:
