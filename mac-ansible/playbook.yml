@@ -20,17 +20,17 @@
             casks:
                 - balenaetcher
                 - discord
-                - jetbrains-toolbox
                 - google-chrome
+                - jetbrains-toolbox
+                - sketch
                 - slack
-                - spotify
                 - spectacle
-                - virtualbox
+                - spotify
+                - sublime
                 - vagrant
+                - virtualbox
                 - zoomus
 
-        -   role: suzuki-shunsuke.nvm
-            nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
         -   role: ssh-keys
             github_key_title: "mbp.15-inch-retina-2014"
         -   role: karlmdavis.rcm-dotfiles
@@ -39,4 +39,6 @@
                 -   repo: 'git@github.com:tomtomau/dotfiles.git'
                     dest: "{{ lookup('env', 'HOME') }}/.dotfiles/"
         -   role: use-zsh
+        -   role: suzuki-shunsuke.nvm
+            nvm_rc_path: "{{ ansible_env.HOME }}/.zsh"
 
