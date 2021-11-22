@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eux
+
 echo "We're going to ask for your password just once, so feel free to go do something else after this, hopefully it should be done then 🎉"
 
 # Ask for the administrator password upfront
