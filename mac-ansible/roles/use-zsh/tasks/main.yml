@@ -15,4 +15,3 @@
       dest=~/.oh-my-zsh
   when: zsh_installed is failed
   register: cloning
-  sudo: no
