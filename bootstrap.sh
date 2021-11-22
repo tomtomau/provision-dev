@@ -8,7 +8,6 @@ set -eux
 # To install gcc, make etc. we need to include Xcode command line dev tools
 # it's a stupid requirement but #macintoshlyf
 echo 'Installing Xcode Command Line Tools...'
-xcode-select --install
 softwareupdate --all --install --force
 
 mkdir -p ~/src/tomtomau/
