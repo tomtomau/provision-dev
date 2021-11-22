@@ -4,6 +4,9 @@ set -eux
 
 echo "We're going to ask for your password just once, so feel free to go do something else after this, hopefully it should be done then 🎉"
 
+# Update to Rosetta 2
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
 # Ask for the administrator password upfront
 sudo -v
 
