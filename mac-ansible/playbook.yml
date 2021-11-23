@@ -7,14 +7,17 @@
             applications:
                 - awscli
                 - tmux
-                - awscli
                 - htop
-                - packer
                 - terraform
                 - php@7.2
                 - jq
                 - yarn
                 - hub
+		- make
+		- qemu
+		# Coreutils adds realpath among other things
+		- coreutils
+		- docker-credential-helper-ecr
                 - zsh
                 - zsh-completions
             casks:
@@ -26,15 +29,15 @@
                 - slack
                 - spectacle
                 - spotify
-                - sublime
-                - vagrant
-                - virtualbox
-                - zoomus
+		- docker
+		- docker-compose
+                #- zoomus
 
         -   role: ssh-keys
-            github_key_title: "mbp.15-inch-retina-2014"
+            github_key_title: "mbp.14-inch-retina-2021"
         -   role: karlmdavis.rcm-dotfiles
             rcm_user: "{{ lookup('env', 'USER') }}"
+            rcup_bin: /usr/local/bin/rcup
             rcm_repos:
                 -   repo: 'git@github.com:tomtomau/dotfiles.git'
                     dest: "{{ lookup('env', 'HOME') }}/.dotfiles/"

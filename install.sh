@@ -1,8 +1,13 @@
 #!/bin/sh
+set -eux
 
 # Setup homebrew, your main package manager
 echo 'Installing Homebrew...'
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tom/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 echo 'Running brew update...'
 brew update

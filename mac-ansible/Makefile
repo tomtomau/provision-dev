@@ -6,4 +6,4 @@ galaxy-install:
 	ansible-galaxy install -r requirements.yml
 
 playbook:
-	ansible-playbook --ask-become-pass -i ./hosts playbook.yml
+	ansible-playbook --ask-become-pass -i ./hosts playbook.yml -u tom

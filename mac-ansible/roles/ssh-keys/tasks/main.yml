@@ -1,10 +1,11 @@
 - name: Check if SSH key has been created
-  command: test -f ~/.ssh/id_rsa
+  stat:
+    path: ~/.ssh/id_rsa
   register: ssh_key_exists
 
 - name: Generate SSH keys
   command: ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N ""
-  when: ssh_key_exists is failed
+  when: not ssh_key_exists.stat.exists
   args:
     creates: ~/.ssh/id_rsa
 
