@@ -25,13 +25,14 @@
                 - discord
                 - google-chrome
                 - jetbrains-toolbox
+		- pop
                 - sketch
                 - slack
                 - spectacle
                 - spotify
 		- docker
 		- docker-compose
-                #- zoomus
+                - zoom
 
         -   role: ssh-keys
             github_key_title: "mbp.14-inch-retina-2021"
