@@ -10,28 +10,38 @@
                 - htop
                 - terraform
                 - php@7.2
+                - q
                 - jq
                 - yarn
                 - hub
-		- make
-		- qemu
-		# Coreutils adds realpath among other things
-		- coreutils
-		- docker-credential-helper-ecr
+                - make
+                - miller
+                - qemu
+                # Coreutils adds realpath among other things
+                - coreutils
+                - docker-credential-helper-ecr
                 - zsh
                 - zsh-completions
+                - airplanedev/tap/airplane
             casks:
-                - balenaetcher
                 - discord
+                - devutils
+                - docker
+                - firefox
                 - google-chrome
                 - jetbrains-toolbox
-		- pop
+                - libreoffice
+                - microsoft-auto-update
+                - microsoft-excel
+                - microsoft-word
+                - loom
+                - ngrok
+                - pop
+                - postman
                 - sketch
                 - slack
                 - spectacle
                 - spotify
-		- docker
-		- docker-compose
                 - zoom
 
         -   role: ssh-keys
