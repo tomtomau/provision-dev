@@ -24,6 +24,8 @@
                 - zsh-completions
                 - airplanedev/tap/airplane
             casks:
+                - 1password
+                - 1password-cli
                 - discord
                 - devutils
                 - docker
@@ -38,7 +40,6 @@
                 - ngrok
                 - pop
                 - postman
-                - sketch
                 - slack
                 - spectacle
                 - spotify
